@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#"
+     xml:base="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCertifie_Album -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCertifie_Album">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCertifie_Certification"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCompose_Album -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCompose_Album">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCompose_Chanson"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCree_Chanson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCree_Chanson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCree_Artiste"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aFait_Album -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aFait_Album">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estFait_Artiste"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aPour_Genre -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aPour_Genre">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estDe_Chanson"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCertifie_Certification -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCertifie_Certification">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCompose_Chanson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCompose_Chanson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCree_Artiste -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCree_Artiste">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estDe_Chanson -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estDe_Chanson">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estFait_Artiste -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estFait_Artiste">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estForme_Artiste -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estForme_Artiste">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#date -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#date">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#nbrVente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#nbrVente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#nom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCertifie_Certification"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCompose_Chanson"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estFait_Artiste"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCree_Chanson"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aFait_Album"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteAuteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteAuteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteChanteur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteChanteur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteInterprete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteCompositeur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteCompositeur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteInterprete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteInterprete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteMusicien -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteMusicien">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteInterprete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCertifie_Album"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification1Platine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification1Platine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification2Platine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification2Platine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification3Platine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification3Platine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#CertificationDiamant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#CertificationDiamant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#CertificationOr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#CertificationOr">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Certification"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aCompose_Album"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#aPour_Genre"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estCree_Artiste"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estDe_Chanson"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#GenreClassique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#GenreClassique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#GenrePop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#GenrePop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Groupe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#estForme_Artiste"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Artiste"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#albumTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#albumTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Album"/>
+        <estFait_Artiste rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#auteurTest"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</date>
+        <nbrVente rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000</nbrVente>
+        <nom>albumTest</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#auteurTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#auteurTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#ArtisteAuteur"/>
+        <aCree_Chanson rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#chansonTest"/>
+        <aFait_Album rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#albumTest"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</date>
+        <nom>auteurtest</nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#chansonTest -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#chansonTest">
+        <rdf:type rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#Chanson"/>
+        <estCree_Artiste rdf:resource="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic#auteurTest"/>
+        <date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2018</date>
+        <nom>chansonTest</nom>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,1069 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.get-the-music.org/ontologies/music#"
+     xml:base="http://www.get-the-music.org/ontologies/music"
+     xmlns:music="http://www.get-music.org/ontologies/music#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.get-the-music.org/ontologies/music"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Album -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Album"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Artiste -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Artiste"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Auteur -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Auteur">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Chanson -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Chanson"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Chanteur -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Chanteur">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Interprete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Compositeur -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Compositeur">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Groupe -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Groupe"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Interprete -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Interprete">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Joue -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Joue">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Musicien"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Musicien"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Instrument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Musicien -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#Musicien">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Interprete"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#aChante -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#aChante">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Chanteur"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chanteur"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#aCompose -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#aCompose">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Compositeur"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Compositeur"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#aEcrit -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#aEcrit">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Auteur"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Auteur"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#centient -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#centient">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estCertifie -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estCertifie">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Certification"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estChantePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estChantePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Chanson"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Chanteur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estComposePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estComposePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Chanson"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Compositeur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estCreePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estCreePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estDans -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estDans">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Chanson"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estDeGenre -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estDeGenre">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Chanson"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estEcritePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estEcritePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Chanson"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Auteur"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#estFormePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.get-music.org/ontologies/music#estFormePar">
+        <rdfs:subPropertyOf rdf:resource="http://www.get-music.org/ontologies/music#Groupe"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Groupe"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Chanteur"/>
+        <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Musicien"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Nom -->
+
+    <owl:DatatypeProperty rdf:about="http://www.get-music.org/ontologies/music#Nom">
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Groupe"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#NombreVente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.get-music.org/ontologies/music#NombreVente">
+        <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Album -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Album"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Artiste -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Artiste"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Auteur -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Auteur">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Batterie -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Batterie">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Certification -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Certification"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Chansson -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Chansson"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#ChanssonFrancaise -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#ChanssonFrancaise">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Chanteur -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Chanteur">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Interprete"/>
+        <owl:disjointWith rdf:resource="http://www.get-music.org/ontologies/music#Musicien"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Classique -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Classique">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Compositeur -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Compositeur">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Country -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Country">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Electronique -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Electronique">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Flut -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Flut">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Genre -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Genre"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Groupe -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Groupe"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Guitare -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Guitare">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#HardRock -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#HardRock">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Instrument -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Instrument"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Interprete -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Interprete">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Metal -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Metal">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Musicien -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Musicien">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Interprete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Piano -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Piano">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Instrument"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Rap -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Rap">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Rock -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Rock">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Traance -->
+
+    <owl:Class rdf:about="http://www.get-music.org/ontologies/music#Traance">
+        <rdfs:subClassOf rdf:resource="http://www.get-music.org/ontologies/music#Genre"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#BobDylan -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#BobDylan">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Dylan</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#DavidGilmour -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#DavidGilmour">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Gilmour</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Desire</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire1">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hurricane</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire2">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isis</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire3">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mozambique</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire4">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One More Cup of Coffee</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire5">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh, Sister</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire6">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joey</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire7">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romance in Durango</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire8">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Diamond Bay</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Desire9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Desire9">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#BobDylan"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Desire"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sara</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Divide -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Divide">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#GalwayGirl"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#Perfect"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#ShapeOfYou"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Divide</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#EdSheeran -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#EdSheeran">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <music:aChante rdf:resource="http://www.get-music.org/ontologies/music#GalwayGirl"/>
+        <music:aChante rdf:resource="http://www.get-music.org/ontologies/music#Perfect"/>
+        <music:aChante rdf:resource="http://www.get-music.org/ontologies/music#ShapeOfYou"/>
+        <music:aEcrit rdf:resource="http://www.get-music.org/ontologies/music#GalwayGirl"/>
+        <music:aEcrit rdf:resource="http://www.get-music.org/ontologies/music#Perfect"/>
+        <music:aEcrit rdf:resource="http://www.get-music.org/ontologies/music#ShapeOfYou"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Christopher Sheeran</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#GalwayGirl -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#GalwayGirl">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#EdSheeran"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Divide"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galway Girl</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Guitare -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Guitare"/>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#NickMason -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#NickMason">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Musicien"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Mason</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Perfect -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Perfect">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#EdSheeran"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Divide"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perfect</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#PinkFloyd -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#PinkFloyd">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Groupe"/>
+        <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#DavidGilmour"/>
+        <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#NickMason"/>
+        <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#RichardWright"/>
+        <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#RogerWaters"/>
+        <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#SydBarrett"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pink Floyd</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#RichardWright -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#RichardWright">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard Wright</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#RogerWaters -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#RogerWaters">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roger Waters</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#ShapeOfYou -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#ShapeOfYou">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#EdSheeran"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#Divide"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shape of you</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#SydBarrett -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#SydBarrett">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Artiste"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Syd Barrett</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-1"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-10"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-11"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-12"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-13"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-2"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-3"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-4"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-5"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-6"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-7"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-8"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall1-9"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-1"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-10"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-11"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-12"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-13"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-2"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-3"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-4"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-5"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-6"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-7"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-8"/>
+        <music:centient rdf:resource="http://www.get-music.org/ontologies/music#TheWall2-9"/>
+        <music:estCreePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Wall</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-1">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In The Flesh?</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-10">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One Of My Turns</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-11">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don&apos;t Leave Me Now</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-12">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Another Brick In The Wall Part 3</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-13">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodbye Cruel World</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-2">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Thin Ice</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-3">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Another Brick In The Wall Part 1</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-4">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Happiest Days Of Our Lives</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-5">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Another Brick In The Wall Part 2</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-6">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mother</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-7">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodbye Blue Sky</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-8">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empty Spaces</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall1-9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall1-9">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Young Lust</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-1">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hey You</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-10">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting For The Worms</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-11">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stop</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-12">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Trial</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-13">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outside The Wall</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-2">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Is There Anybody Out There?</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-3">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nobody Home</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-4">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vera</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-5">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bring The Boys Back Home</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-6">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comfortably Numb</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-7">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Show Must Go On</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-8">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In The Flesh</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#TheWall2-9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#TheWall2-9">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
+        <music:estChantePar rdf:resource="http://www.get-music.org/ontologies/music#PinkFloyd"/>
+        <music:estDans rdf:resource="http://www.get-music.org/ontologies/music#TheWall"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Run Like Hell</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#+ -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#+">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Batterie"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Flut"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Guitare"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Piano"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#ChanssonFrancaise"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Classique"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Country"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Electronique"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#HardRock"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Metal"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Rap"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Rock"/>
+            <rdf:Description rdf:about="http://www.get-music.org/ontologies/music#Traance"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
