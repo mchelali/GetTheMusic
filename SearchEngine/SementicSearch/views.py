@@ -54,13 +54,69 @@ def search(request):
                     FILTER (?NomAlbum='"""+ album +"""')
                 }
                 """)
+        elif groupe != "" and album != "" and chansson == "":
+            qres = db.query("""  	
+                    SELECT  ?nomCHansson
+                    where {
+                        ?Chansson music:estDans ?album .
+                        ?Chansson music:Nom ?nomCHansson .
+
+                        ?chansson music:estChantePar ?artiste .
+                        ?chansson music:Nom ?nomCHansson .
+
+                        ?album music:Nom ?NomAlbum .
+                        ?artiste music:Nom ?nom .
+                        
+                            FILTER (?nom='""" + groupe + """' && ?NomAlbum='""" + album + """') .
+                    }
+                """)
+        elif groupe != "" and album == "" and chansson != "":
+            qres = db.query("""  	
+                        SELECT  ?nomCHansson
+                        where {
+                            ?Chansson music:estDans ?album .
+                            ?Chansson music:Nom ?nomCHansson .
+
+                            ?chansson music:estChantePar ?artiste .
+                            ?chansson music:Nom ?nomCHansson .
+
+                            
+                            ?artiste music:Nom ?nom .
+                            ?Chansson  music:Nom ?nomCHansson 
+
+                                FILTER (?nom='""" + groupe + """' && ?nomCHansson ='""" + chansson +"""') .
+                        }
+                    """)
+        elif groupe == "" and album!="" and chansson != "":
+            qres = db.query("""  	
+                SELECT  ?nomCHansson
+                where {
+                    ?Chansson music:estDans ?album .
+                    ?Chansson music:Nom ?nomCHansson .
+                    
+                    ?chansson music:estChantePar ?artiste .
+                    ?chansson music:Nom ?nomCHansson .
+                    
+                    ?album music:Nom ?NomAlbum .
+                    ?Chansson  music:Nom ?nomCHansson 
+                        FILTER ( ?NomAlbum='"""+ album +"""' && ?nomCHansson ='""" + chansson +"""') .
+                }
+            """)
         elif groupe != "" and album!="" and chansson != "":
             qres = db.query("""  	
-                SELECT  ?nom
+                SELECT  ?nomCHansson
                 where {
-                    ?Chansson ?y music:Chansson .
-                    ?Chansson  music:Nom ?nom .
-                 }
+                    ?Chansson music:estDans ?album .
+                    ?Chansson music:Nom ?nomCHansson .
+                    
+                    ?chansson music:estChantePar ?artiste .
+                    ?chansson music:Nom ?nomCHansson .
+                    
+                    ?album music:Nom ?NomAlbum .
+                    ?artiste music:Nom ?nom .
+                    ?Chansson  music:Nom ?nomCHansson 
+                        FILTER (?nom='"""+ groupe +"""' && ?NomAlbum='"""+ album +"""' && ?nomCHansson ='""" + chansson +"""') .
+                }
             """)
 
         resultat = []
