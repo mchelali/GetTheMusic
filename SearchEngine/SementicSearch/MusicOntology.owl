@@ -183,7 +183,6 @@
         <rdfs:domain rdf:resource="http://www.get-music.org/ontologies/music#Chansson"/>
         <rdfs:range rdf:resource="http://www.get-music.org/ontologies/music#Album"/>
     </owl:ObjectProperty>
-    
 
 
     <!-- http://www.get-music.org/ontologies/music#estDeGenre -->
