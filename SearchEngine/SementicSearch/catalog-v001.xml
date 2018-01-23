@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1516564179552" name="http://www.get-the-music.org/ontologies/music" uri="MusicOntology.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1516564179552" name="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic" uri="ontolProjetMusic.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516718777988" name="http://www.get-the-music.org/ontologies/music" uri="MusicOntology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1516718777988" name="http://www.semanticweb.org/roland/ontologies/2018/0/ontolProjetMusic" uri="ontolProjetMusic.owl"/>
     </group>
 </catalog>

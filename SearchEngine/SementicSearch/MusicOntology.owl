@@ -584,6 +584,14 @@
     
 
 
+    <!-- http://www.get-music.org/ontologies/music#Diament -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Diament">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Certification"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.get-music.org/ontologies/music#Divide -->
 
     <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Divide">
@@ -591,6 +599,7 @@
         <music:centient rdf:resource="http://www.get-music.org/ontologies/music#GalwayGirl"/>
         <music:centient rdf:resource="http://www.get-music.org/ontologies/music#Perfect"/>
         <music:centient rdf:resource="http://www.get-music.org/ontologies/music#ShapeOfYou"/>
+        <music:estCertifie rdf:resource="http://www.get-music.org/ontologies/music#Platine"/>
         <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Divide</music:Nom>
     </owl:NamedIndividual>
     
@@ -606,6 +615,7 @@
         <music:aEcrit rdf:resource="http://www.get-music.org/ontologies/music#GalwayGirl"/>
         <music:aEcrit rdf:resource="http://www.get-music.org/ontologies/music#Perfect"/>
         <music:aEcrit rdf:resource="http://www.get-music.org/ontologies/music#ShapeOfYou"/>
+        <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Sheeran</music:Nom>
         <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Christopher Sheeran</music:Nom>
     </owl:NamedIndividual>
     
@@ -637,6 +647,14 @@
     
 
 
+    <!-- http://www.get-music.org/ontologies/music#Or -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Or">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Certification"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.get-music.org/ontologies/music#Perfect -->
 
     <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Perfect">
@@ -658,6 +676,14 @@
         <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#RogerWaters"/>
         <music:estFormePar rdf:resource="http://www.get-music.org/ontologies/music#SydBarrett"/>
         <music:Nom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pink Floyd</music:Nom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.get-music.org/ontologies/music#Platine -->
+
+    <owl:NamedIndividual rdf:about="http://www.get-music.org/ontologies/music#Platine">
+        <rdf:type rdf:resource="http://www.get-music.org/ontologies/music#Certification"/>
     </owl:NamedIndividual>
     
 
